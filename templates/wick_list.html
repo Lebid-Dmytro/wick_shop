@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            {% for info in wick %}
+            <div class="col" style="color: Black">
+                <div class="card shadow-sm">
+                    <div class="men-thumb-item">
+                        <img src="{{ info.image.url }}" width="100%" height="425"/>
+                    </div>
+
+                    <div class="card-body">
+                        <p class="card-text">{{ info.name }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="{% url 'wick_detail' info.url %}" style="color:MediumSeaGreen">
+                                    <button type="button"
+                                            class="btn btn-sm btn-outline-secondary">Інформація
+                                </a>
+                                </button>
+<!--                                <button style="color:MediumSeaGreen" type="button"-->
+<!--                                        class="btn btn-sm btn-outline-secondary btn-buy">Додати в корзину-->
+<!--                                </button>-->
+                            </div>
+                            <small class="text-muted">Ціна: {{ info.price }}</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+{% endblock content %}
+
+
+
+

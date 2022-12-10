@@ -1,0 +1,209 @@
+<!--{% load static i18n %}-->
+{% load contact_tags %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Свічкова майстерня</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/footers/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* Add some padding on document's body to prevent the content
+    to go underneath the header and footer */
+    body{
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;
+        background: #DC9B74;
+        padding: 10px 0;
+        z-index:9999
+    }
+    .fixed-header{
+        top: 0;
+
+    }
+    .fixed-footer{
+        bottom: 0;
+    }
+    .container{
+        width: 80%;
+        margin: 0 auto; /* Center the DIV horizontally */
+    }
+    nav a{
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 12px;
+        display: inline-block;
+    }
+
+    .glass { z-index: 1;
+
+    }
+
+    .bottom-gd.row {
+    margin: 0;
+    }
+    .button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+
+
+
+</style>
+
+<!--<header class="site-header sticky-toppy-1 p-3 text-bg-dark">-->
+<div class="glass">
+    <div class="fixed-header">
+        <div class="container">
+            <nav>
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
+
+                    <form action="{% url 'search' %}" method="get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark text-bg-white" name="q"
+                               placeholder="Пошук..."
+                               aria-label="Search">
+
+                    </form>
+
+                    <div class="text-end">
+                        <a href="{% url 'sign_in' %}">
+                            <button type="button" class="btn btn-outline-light me-2">Login</button>
+                        </a>
+                        <button type="button" class="btn btn-outline-light me-2">Sign-up</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--    <div class="media py-5">-->
+        <!--        <img src="{% static '100.jpg' %}" class="mr-1 img-fluid" alt="image">-->
+        <!--    </div>-->
+    </div>
+</div>
+</header>
+<body>
+{% block content %}
+
+{% endblock content %}
+<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+<div class="container">
+
+    <footer class="py-5">
+        <div class="row">
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="" class="nav-link p-0 text-muted">Корзина</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-2 mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+
+                <h5>Підпишіться на наші сповіщення:</h5>
+
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                         {% contact_form %}
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>© 2022 Company, Inc. All rights reserved.</p>
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                    twitter</a></li>
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                    instagram</a></li>
+                <li class="ms-3"><a class="link-dark" href="#">
+                    <svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                    facebook</a></li>
+            </ul>
+        </div>
+
+        <!-- social icons -->
+</div>
+</footer>
+</div>
+
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>

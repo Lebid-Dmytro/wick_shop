@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container marketing">
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">{{ info.name }}:
+                </h2>
+                <span class="text-muted"> </span>
+                <p class="lead">Опис: {{ info.description }}</p>
+                <!--                <span class="text-muted">Ширина: {{ info.diameter }}</span>-->
+
+                <div>
+                    <form id="form_buying_product" class="form-inline" >{% csrf_token %}
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="number" id="number">
+                        </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" id="submit_btn" class="btn btn-success btn-buy"
+                                        data-product_id="{{ info.id }}"
+                                        data-name="{{ info.name }}"
+                                        data-price="{{ info.price }}">
+                                    Купити
+                                </button>
+                            </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="{{ info.image.url }}" width="90%" height="600"/>
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                     height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                     preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                    <!--                    <rect width="100%" height="100%" fill="#eee">-->
+
+                    </rect>
+
+                </svg>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
